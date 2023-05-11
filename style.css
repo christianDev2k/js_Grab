@@ -1,0 +1,110 @@
+.myBg {
+    height: 100vh;
+}
+
+.myForm__header {
+    border-bottom: 2px dashed #000;
+}
+
+input[type=radio] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #198754;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type=radio]::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+input[type=radio]:checked::before{
+    display: block;
+}
+
+input[type=text] {
+    font-size: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0;
+    transition: all .5s;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+input[type=text]::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+input[type=text]:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.underline {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background-color: #198754;
+    transition: all .5s;
+    position: relative;
+    border-radius: 4px;
+}
+
+input[type=text]:focus ~ .underline {
+    width: 100%;
+}
+
+.myForm__body .btn {
+    padding: 10px 60px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+}
+
+.my__modal.active {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    animation: scaleIn .3s ease-in-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(.7); 
+    }
+    to {
+        transform: scale(1); 
+    }
+}
+
+.my__bill td, .my__bill th {
+    padding: 15px 20px;
+    border: 1px solid #000;
+}
+
+.modal__close {
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
