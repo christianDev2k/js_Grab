@@ -111,6 +111,10 @@ input[type=text]:focus ~ .underline {
     }
 }
 
+.modal_container {
+    width: 70%;
+}
+
 .my__bill td, .my__bill th {
     padding: 15px 20px;
     border: 1px solid #000;
@@ -122,6 +126,15 @@ input[type=text]:focus ~ .underline {
     padding: 10px 15px;
     font-size: 20px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 25px;
+    }
+    /* .my__bill td, .my__bill th {
+        padding: 0 20px;
+    } */
 }
 
 @media screen and (max-width: 991.98px) {
@@ -160,7 +173,22 @@ input[type=text]:focus ~ .underline {
     input[type=text] {
         font-size: 16px;
     }
+
     .myForm__body .btn {
         padding: 8px 16px;
+    }
+
+    .modal_container {
+        width: 100%;
+        margin: 0 16px;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    body {
+        font-size: 16px;
+    }
+    .my__bill td, .my__bill th {
+        padding: 0 4px;
     }
 }
