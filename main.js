@@ -6,6 +6,9 @@ const myModal = document.querySelector('.my__modal');
 const billInner = document.querySelector('.modal__content');
 const kmError = document.querySelector('.km__error');
 const timeError = document.querySelector('.time__error');
+const priceCar = [2000, 8000, 7500, 7000];
+const priceSUV = [3000, 9000, 8500, 8000];
+const priceBlack = [3500, 10000, 9500, 9000];
 
 function checkInput() {
     if (isNaN(numKm.value) || numKm.value === '' || isNaN(numTime.value) || numTime.value === '') {
@@ -45,7 +48,7 @@ function GrabCheckout(numKm, numTime, arr) {
     };
 
     if (numTime > 3) {
-        timeCost = Math.floor((numTime - 3) / 3) * arr[0];
+        timeCost = Math.floor(numTime / 3) * arr[0];
         tripsInfo.row3 = timeCost;
     }
 
@@ -69,15 +72,11 @@ function GrabCheckout(numKm, numTime, arr) {
         tripsInfo.row2 = arr[3];
         elseKm = (numKm - 1) * arr[3];
     }
-    console.log(timeCost);
-    console.log(firstKm);
-    console.log(elseKm);
     tripsInfo.row4 = timeCost + firstKm + elseKm;
     return tripsInfo;
 }
 
 function showBill(arr, obj) {
-    console.log(obj.row1)
     billInner.innerHTML = `
         <div class="modal__close position-absolute">
             <i class="fa-solid fa-circle-xmark"></i>
@@ -126,17 +125,15 @@ resultBtn.addEventListener('click', function (e) {
     // KIỂM TRA THÔNG TIN NHẬP 
     if (checkInput()) {
         //RESET THÔNG BÁO LỖI 
-            kmError.style.opacity = '0';
-            timeError.style.opacity = '0';
+        kmError.style.opacity = '0';
+        timeError.style.opacity = '0';
+        
         // HIỆN HÓA ĐƠN 
         myModal.style.display = 'flex';
 
         // XỬ LÍ LOGIC 
         let selectedVehicle;
         let result = {};
-        const priceCar = [2000, 8000, 7500, 7000];
-        const priceSUV = [3000, 9000, 8500, 8000];
-        const priceBlack = [3500, 10000, 9500, 9000];
         vehicle.forEach(function (item) {
             if (item.checked) {
                 selectedVehicle = item.value;
@@ -159,8 +156,6 @@ resultBtn.addEventListener('click', function (e) {
     else {
         showError();
     }
-
-
 })
 
 
