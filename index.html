@@ -17,24 +17,24 @@
 
 <body>
     <div class="myBg bg-success d-flex justify-content-center align-items-center">
-        <div class="myForm__content w-50 bg-white rounded-3">
+        <div class="myForm__content bg-white rounded-3">
             <div class="myForm__header text-center py-3">
-                <h1 class="fs-1 fw-semibold">TÍNH CƯỚC GRAB</h1>
+                <h1 class="modal__title fw-semibold text-success">TÍNH CƯỚC GRAB</h1>
             </div>
             <div class="myForm__body p-3">
-                <form action="" class="fs-3">
+                <form action="">
                     <div>
                         <label for="" class="">Vui lòng chọn loại xe: </label>
                         <div class="row">
-                            <div class="col d-flex align-items-center justify-content-center">
-                                <input type="radio" name="vehicle" class="me-3" value="grabCar">
+                            <div class="col-12 col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-center">
+                                <input type="radio" name="vehicle" class="me-3" value="grabCar" checked>
                                 <label for="">Grab Car</label>
                             </div>
-                            <div class="col d-flex align-items-center justify-content-center">
+                            <div class="col-12 col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-center">
                                 <input type="radio" name="vehicle" class="me-3" value="grabSUV">
                                 <label for="">Grab SUV</label>
                             </div>
-                            <div class="col d-flex align-items-center justify-content-center">
+                            <div class="col-12 col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-center">
                                 <input type="radio" name="vehicle" class="me-3" value="grabBlack">
                                 <label for="">Grab Black</label>
                             </div>
@@ -42,18 +42,20 @@
                     </div>
                     <div class="mt-3">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-lg-6">
                                 <label for="" class="">Nhập vào số km: </label>
-                                <div class="input__content">
-                                    <input type="text" placeholder="Số km" id="numKm" class="form-control mt-2">
+                                <div>
+                                    <input type="text" placeholder="Số km" id="numKm" class="form-control mt-1 mt-lg-2">
                                     <div class="underline"></div>
+                                    <div class="km__error">Vui lòng nhập lại đúng thông tin</div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-lg-6">
                                 <label for="" class="">Nhập vào thời gian chờ: </label>
-                                <div class="input__content position-relative">
-                                    <input type="text" placeholder="Số phút" id="numTime" class="form-control mt-2">
+                                <div>
+                                    <input type="text" placeholder="Số phút" id="numTime" class="form-control mt-1 mt-lg-2">
                                     <div class="underline"></div>
+                                    <div class="time__error">Vui lòng nhập lại đúng thông tin</div>
                                 </div>
                             </div>
                         </div>
@@ -70,45 +72,7 @@
 
     <div class="my__modal align-items-center justify-content-center">
         <div class="modal_container w-50">
-            <div class="modal__content">
-                <!-- <div class="position-relative">
-                    <table class="text-center w-100 my__bill bg-success-subtle fw-semibold">
-                        <div class="modal__close position-absolute">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </div>
-                        <tr>
-                            <th colspan="4" class="fs-4 text-center">BẢNG GIÁ CƯỚC GRAB</th>
-                        </tr>
-                        <tr>
-                            <th>CHI TIẾT</th>
-                            <th>SỬ DỤNG</th>
-                            <th>ĐƠN GIÁ (1000Đ)</th>
-                            <th>THÀNH TIỀN (1000Đ)</th>
-                        </tr>
-                        <tr>
-                            <td>KM ĐẦU TIÊN</td>
-                            <td>1</td>
-                            <td>....</td>
-                            <td>....</td>
-                        </tr>
-                        <tr>
-                            <td>TỪ 2 ĐẾN ...</td>
-                            <td>...</td>
-                            <td>....</td>
-                            <td>....</td>
-                        </tr>
-                        <tr>
-                            <td>Thời gian chờ</td>
-                            <td>...</td>
-                            <td>....</td>
-                            <td>....</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="text-end fw-bold">TỔNG TIỀN: ....</td>
-                        </tr>
-                    </table>
-                </div> -->
-            </div>
+            <div class="modal__content position-relative"></div>
         </div>
     </div>
 
